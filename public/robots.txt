@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 
 
-Sitemap: https://metaedit.onrender.com/sitemap.xml
+Sitemap: https://editdocxmetadata.onrender.com/sitemap.xml
