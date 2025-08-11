@@ -60,7 +60,7 @@ export default function Landing() {
     const url = URL.createObjectURL(updatedBlob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = files[0].name.replace(/\.docx$/, "-updated.docx");
+    link.download = files[0].name.replace(".", "-updated.");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -141,7 +141,9 @@ export default function Landing() {
           className="text-4xl font-bold text-black dark:text-white"
         >
           click anywhere to
-          <br /> upload your <span className="underline">.docx</span> file
+          <br /> upload your <span className="underline">.docx</span>,{" "}
+          <span className="underline">.pptx</span> or{" "}
+          <span className="underline">.xlsx</span> file
         </h1>
       </header>
 
@@ -235,7 +237,7 @@ export default function Landing() {
       <input
         max={1}
         type="file"
-        accept=".docx"
+        accept=".docx, .pptx, .xlsx"
         style={{
           position: "absolute",
           top: 0,
